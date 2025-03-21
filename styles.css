@@ -1,0 +1,314 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(97,180,207);
+    background: linear-gradient(90deg, rgba(97,180,207,1) 11%, rgba(177,101,212,1) 98%);
+    text-align: center;
+    
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Верхняя панель */
+header {
+    background: rgb(52,56,57);
+    background: radial-gradient(circle, rgba(52,56,57,1) 4%, rgba(47,45,47,1) 100%);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Меню */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+nav ul li {
+    margin: 10px 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.3s;
+    font-family: 'Impact';
+    font-weight: 200;
+}
+
+nav ul li a:hover {
+    color: #E6399B;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+/* Общий стиль для всех h2 */
+h2 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    font-family: 'Impact', sans-serif;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 50px; 
+    height: 3px; 
+    background: #333; 
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* Главная */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 650px; 
+    margin: 80px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 20px;
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.home img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    margin-right: 5px; 
+}
+
+.home img:hover {
+    transform: scale(1.05);
+}
+
+.home .text {
+    max-width: 340px; 
+    text-align: center;
+    margin-left: 5px; 
+}
+
+.home p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.7;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Comic Sans MS';
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .home img {
+        width: 220px;
+        height: 220px;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .home .text {
+        margin-left: 0;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .home h2 {
+        font-size: 24px;
+    }
+
+    .home p {
+        font-size: 16px;
+    }
+}
+
+
+/* Галерея */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 50px 10%;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}
+
+
+/* Достижения */
+.achievements {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    padding: 50px 10%;
+    max-width: 1000px;
+    margin: auto;
+    justify-content: center;
+}
+
+.achievements article {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.achievements article:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.achievements img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.achievements p {
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 1.5;
+    font-family: 'Comic Sans MS';
+}
+
+@media (max-width: 600px) {
+    .achievements {
+        grid-template-columns: repeat(1, 1fr); /* 1 колонка на мобильных */
+    }
+}
+
+
+/* Контейнер контактов */
+.contacts {
+    text-align: center;
+    padding: 50px 10%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contacts table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.contacts th, .contacts td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contacts th {
+    font-weight: bold;
+    font-size: 18px;
+    color: #222;
+    font-family: 'Impact';
+}
+
+.contacts td a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #222;
+    transition: 0.3s;
+    font-family: 'Comic Sans MS';
+}
+
+.contacts td a:hover {
+    color: #FFA500;
+}
+
+.contacts tr:last-child td {
+    border-bottom: none;
+}
+
+@media (max-width: 600px) {
+    .contacts table {
+        font-size: 16px;
+    }
+    .contacts th, .contacts td {
+        padding: 12px;
+    }
+}
