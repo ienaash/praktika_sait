@@ -244,7 +244,7 @@ h2::after {
 .achievements h2 {
     font-size: 2em;
     margin: 20px 0;
-    color: #333;
+    color: #222;
     text-align: center;
     grid-column: span 2;
 }
