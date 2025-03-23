@@ -77,7 +77,6 @@ nav ul li a:hover {
     }
 }
 
-/* Общий стиль для всех h2 */
 h2 {
     font-size: 28px;
     color: #222;
@@ -187,6 +186,13 @@ h2::after {
     max-width: 1200px;
     margin: auto;
 }
+.gallery h2 {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #222;
+    text-align: center;
+    grid-column: span 3;
+}
 
 .gallery img {
     width: 100%;
@@ -213,8 +219,18 @@ h2::after {
     }
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
 
-/* Достижения */
+/* Мои достижения */
 .achievements {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
@@ -223,6 +239,14 @@ h2::after {
     max-width: 1000px;
     margin: auto;
     justify-content: center;
+}
+
+.achievements h2 {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #333;
+    text-align: center;
+    grid-column: span 2;
 }
 
 .achievements article {
@@ -245,6 +269,7 @@ h2::after {
     border-radius: 10px;
 }
 
+
 .achievements p {
     font-size: 18px;
     margin-top: 10px;
@@ -254,10 +279,9 @@ h2::after {
 
 @media (max-width: 600px) {
     .achievements {
-        grid-template-columns: repeat(1, 1fr); /* 1 колонка на мобильных */
+        grid-template-columns: repeat(1, 1fr);
     }
 }
-
 
 /* Контейнер контактов */
 .contacts {
